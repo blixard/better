@@ -1,9 +1,12 @@
 package com.example.betterlife;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,10 +28,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ConstraintLayout clMenu = (ConstraintLayout)findViewById(R.id.cl_1_menu);
+        ConstraintLayout clReport = (ConstraintLayout)findViewById(R.id.cl_2_report);
+        ConstraintLayout clPothole = (ConstraintLayout)findViewById(R.id.cl_3_pothole);
+        ConstraintLayout clGarbage = (ConstraintLayout)findViewById(R.id.cl_4_garbage);
+
+        clReport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Report.class);
+                startActivity(intent);
+            }
+        });
+
+        clPothole.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Pothole.class);
+                startActivity(intent);
+            }
+        });
+
         RecyclerView rv = findViewById(R.id.recyclerView);
         rv.setLayoutManager(new LinearLayoutManager(this));
-        String [] a = { "abc","abc","abc","abc","abc","abc","abc","abc","abc","abc"};
-
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("posts");
@@ -36,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                al.clear();
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
 
@@ -65,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
 //        writeNewPost("rupel","title of this", "pothole" , "this is the description" );
     }
 
-    public void writeNewPost( String username, String title, String post_type, String description ) {
-        Posts post = new Posts(username, title , post_type , description);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference postRef = database.getReference("posts");
-        String postId = postRef.push().getKey();
-        postRef.child(postId).setValue(post);
-    }
+//    public void writeNewPost( String username, String title, String post_type, String description ) {
+//        Posts post = new Posts(username, title , post_type , description);
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference postRef = database.getReference("posts");
+//        String postId = postRef.push().getKey();
+//        postRef.child(postId).setValue(post);
+//    }
 }

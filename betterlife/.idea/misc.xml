@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_main.xml" value="0.176" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/text_row_item.xml" value="0.5689655172413793" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable-v24/mainAct_dashboard_bg.xml" value="0.15" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable-v24/main_act_dashboard_bg.xml" value="0.15" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable-v24/rounded_cornor_white.xml" value="0.15" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/gradient_ss_bg.xml" value="0.15" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/no_photo_taken_pic.xml" value="0.15" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/rounded_cornor.xml" value="0.2712820512820513" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_after_submission.xml" value="0.13385416666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_main.xml" value="0.1511627906976744" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_pothole.xml" value="0.264" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_report.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_splashscreen.xml" value="0.176" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/text_row_item.xml" value="0.4785714285714286" />
       </map>
     </option>
   </component>
