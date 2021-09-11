@@ -7,6 +7,8 @@ public class Posts {
     public Double confidence;
     public String lattitude;
     public String longitude;
+    public int likes=0;
+    public int valiance=0;
 //    int likes=0;
 //    int valiance=0;
     public Posts(){

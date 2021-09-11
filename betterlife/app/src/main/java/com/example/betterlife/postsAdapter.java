@@ -1,10 +1,12 @@
 package com.example.betterlife;
 
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +24,8 @@ public class postsAdapter extends RecyclerView.Adapter<postsAdapter.ViewHolder> 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView title;
         private final TextView des;
+        private final TextView confidence;
+        private final TextView location;
 
         public ViewHolder(View view) {
             super(view);
@@ -29,6 +33,10 @@ public class postsAdapter extends RecyclerView.Adapter<postsAdapter.ViewHolder> 
 
             title = (TextView) view.findViewById(R.id.tv_title_post_ma);
             des = (TextView) view.findViewById(R.id.tv_des_ma);
+            confidence = (TextView) view.findViewById(R.id.tv_rv_confidence);
+            location = (TextView) view.findViewById(R.id.tv_rv_location);
+
+
         }
 
         public TextView getTitle() {
@@ -37,6 +45,12 @@ public class postsAdapter extends RecyclerView.Adapter<postsAdapter.ViewHolder> 
 
         public TextView getDes() {
             return des;
+        }
+        public TextView getConfidence() {
+            return confidence;
+        }
+        public TextView getLocation() {
+            return location;
         }
     }
 
@@ -57,6 +71,8 @@ public class postsAdapter extends RecyclerView.Adapter<postsAdapter.ViewHolder> 
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.text_row_item, viewGroup, false);
 
+
+
         return new ViewHolder(view);
     }
 
@@ -68,6 +84,9 @@ public class postsAdapter extends RecyclerView.Adapter<postsAdapter.ViewHolder> 
         // contents of the view with that element
         viewHolder.getTitle().setText(localDataSet.get(position).title);
         viewHolder.getDes().setText(localDataSet.get(position).description);
+        viewHolder.getConfidence().setText( "confidence: " +   localDataSet.get(position).confidence);
+        viewHolder.getLocation().setText(localDataSet.get(position).lattitude + " , " + localDataSet.get(position).longitude );
+
         Log.d("yolopel" , localDataSet.get(position).description);
     }
 

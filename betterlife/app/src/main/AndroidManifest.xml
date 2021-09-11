@@ -15,6 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BetterLife">
         <activity
+            android:name=".GarbageTest"
+            android:exported="true" />
+        <activity
+            android:name=".PotholeTest"
+            android:exported="true" />
+        <activity
+            android:name=".ModelSelection"
+            android:exported="true" />
+        <activity
+            android:name=".MenuScreen"
+            android:exported="true" />
+        <activity
+            android:name=".Garbage"
+            android:exported="true" />
+        <activity
             android:name=".AfterSubmission"
             android:exported="true" />
         <activity

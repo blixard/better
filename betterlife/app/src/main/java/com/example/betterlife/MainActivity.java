@@ -1,10 +1,13 @@
 package com.example.betterlife;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout clPothole = (ConstraintLayout)findViewById(R.id.cl_3_pothole);
         ConstraintLayout clGarbage = (ConstraintLayout)findViewById(R.id.cl_4_garbage);
 
+
+        clMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MenuScreen.class);
+                startActivity(intent);
+            }
+        });
+
         clReport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Pothole.class);
+                startActivity(intent);
+            }
+        });
+
+        clGarbage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Garbage.class);
                 startActivity(intent);
             }
         });

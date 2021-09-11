@@ -7,21 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Report extends AppCompatActivity {
+public class ModelSelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report);
-        Button btnPothole = findViewById(R.id.bt_report_pothole);
-        Button btnGarbage = findViewById(R.id.bt_report_grabage);
-        Button btnCorruption = findViewById(R.id.bt_report_corruption);
-        Button btnOthers = findViewById(R.id.bt_report_other);
+        setContentView(R.layout.activity_model_selection);
+
+        Button btnPothole = findViewById(R.id.btn_models_pothole);
+        Button btnGarbage = findViewById(R.id.btn_models_garbage);
 
         btnPothole.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Pothole.class);
+                Intent intent = new Intent(getApplicationContext() , PotholeTest.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +28,7 @@ public class Report extends AppCompatActivity {
         btnGarbage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Garbage.class);
+                Intent intent = new Intent(getApplicationContext() , GarbageTest.class);
                 startActivity(intent);
             }
         });
