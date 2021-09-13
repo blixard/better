@@ -204,26 +204,26 @@ The probability obtained as output after providing the required image as input c
 ![ss1](./Images/app%20screenshots/1.jpg?raw=true "Title")
 
 #### Home Screen
-![ss1](./Images/app%20screenshots/2.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/2r.jpg?raw=true "Title")
 
 #### Report View / Comments
-![ss1](./Images/app%20screenshots/4.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/4r.jpg?raw=true "Title")
 
 #### Menu Screen 1
-![ss1](./Images/app%20screenshots/5.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/5r.jpg?raw=true "Title")
 
 #### Menu Screen 2
-![ss1](./Images/app%20screenshots/6.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/6r.jpg?raw=true "Title")
 
 
 #### Sign In
-![ss1](./Images/app%20screenshots/8.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/8r.jpg?raw=true "Title")
 
 #### Make Report Screen
-![ss1](./Images/app%20screenshots/11.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/11r.jpg?raw=true "Title")
 
 #### User / User Posts / User Comments
-![ss1](./Images/app%20screenshots/13.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/13r.jpg?raw=true "Title")
 
 #### Sign Out
-![ss1](./Images/app%20screenshots/7.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/7r.jpg?raw=true "Title")
