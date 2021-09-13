@@ -195,3 +195,7 @@ The probability obtained as output after providing the required image as input c
 
 ## Images
 ![Alt text](https://github.com/blixard/better/blob/master/Images/Screenshot_2021-09-13-19-35-30-642_com.example.betterlife.jpg?raw=true "Title")
+
+<image-crop src="/avatar.jpg">
+  <img src="https://github.com/blixard/better/blob/master/Images/Screenshot_2021-09-13-19-35-30-642_com.example.betterlife.jpg" alt="" data-loading-slot />
+</image-crop>
