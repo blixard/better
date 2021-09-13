@@ -129,6 +129,8 @@ This is my code :
 https://www.kaggle.com/shubhaprasad/pothole-image-classification
 
 ##### Results
+##### Application
+The probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Potholes type
 
 
  #### WASTE DETECTION
@@ -156,4 +158,30 @@ https://www.kaggle.com/shubhaprasad/waste-organic-recyclable
 ##### Results
 
 ##### Application
-This probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Garabge type
+The probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Garabge type
+
+ #### ROADWAY FLOODING DETECTION
+##### About
+The main aim of this is to get the probability that an image is of Roadway flooding
+
+##### Input
+The app takes the image of road as an input
+##### Output
+The app gives confidence probability of 
+Roadway floods
+
+This probability can be used to give confidence(Machine level validation ) to a report (post) on pothole 
+
+ ##### Dataset used
+Roadway Flooding Image Dataset
+https://www.kaggle.com/saurabhshahane/roadway-flooding-image-dataset
+
+ ##### Code
+This is my code :
+https://www.kaggle.com/shubhaprasad/roadwayflood
+
+##### Results
+Training Accuracy : 100%
+Testing Accuracy : 100%
+##### Application
+The probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Road Flood type
