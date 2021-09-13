@@ -194,4 +194,4 @@ The probability obtained as output after providing the required image as input c
 # Application
 
 ## Images
-![Alt text](relative/Images/img.jpg?raw=true "Title")
+![Alt text](https://github.com/blixard/better/blob/master/Images/Screenshot_2021-09-13-19-35-30-642_com.example.betterlife.jpg?raw=true "Title")
