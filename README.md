@@ -121,4 +121,39 @@ The app gives confidence probability of
 This probability can be used to give confidence(Machine level validation ) to a report (post) on pothole 
 
  ##### Dataset used
- 
+Pothole Detection Dataset
+https://www.kaggle.com/atulyakumar98/pothole-detection-dataset
+
+ ##### Code
+This is my code :
+https://www.kaggle.com/shubhaprasad/pothole-image-classification
+
+##### Results
+
+
+ #### WASTE DETECTION
+##### About
+The main aim of this is to get the probability of wheather an image is Waste (Recyclable) or not Waste (Organic) 
+
+##### Input
+The app takes the image of object/ objects as an input
+##### Output
+The app gives confidence probability of 
+
+ 1. is waste
+ 2. is organic
+
+This probability can be used to give confidence(Machine level validation ) to a report (post) on pothole 
+
+ ##### Dataset used
+Waste Classification Data
+https://www.kaggle.com/techsash/waste-classification-data
+
+ ##### Code
+This is my code :
+https://www.kaggle.com/shubhaprasad/waste-organic-recyclable
+
+##### Results
+
+##### Application
+This probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Garabge type
