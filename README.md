@@ -30,3 +30,42 @@ The app supports multi language, local languages. Making it accessible to a much
 
 ### Social Media 
 The app is mainly a reporting app, where people report publicly/anonymously, the issuses that they want to be resolved. But this also acts as a social mdeia platform, where other people can see your reports and you can see other people s reports and provide your opinion, your voice, and your validation by using feature like Like, Comments, etc that gets updated in real time. Based on your activities you get social points which are displayed along with your val points. This enables a platform for a set of people and ecourages the act of raising issues and resolving it, thus making everything a bit **Better than Before** 
+
+# Development
+
+## Android
+### Information
+The Folder betterlife in this repository contains the code base for the entire application. 
+IDE used is android studio 
+Language used is Java
+### Getting Started
+This repository contains the code base for the android application.
+To get started with the developent of this application,
+
+ 1. Install Android Studio
+Here is a link to help you with that https://developer.android.com/studio/install
+ 2. Clone this Repository
+ 3. Open project in Android studio and selct the betterlife folder available in this repository
+ 4. Let Build gradle do the world for you in setting up the project , and now you are good to go. 
+
+### Dependencies
+#### Project level 
+
+  classpath "com.android.tools.build:gradle:7.0.0"  
+  classpath 'com.google.gms:google-services:4.3.10'  
+  
+#### App level
+implementation 'androidx.appcompat:appcompat:1.3.1'  
+implementation 'com.google.android.material:material:1.4.0'  
+implementation 'com.google.android.gms:play-services-auth:19.2.0'  
+implementation 'androidx.constraintlayout:constraintlayout:2.1.0'  
+implementation 'com.google.firebase:firebase-database:20.0.1'  
+implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'  
+implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'  
+implementation 'com.google.android.gms:play-services-location:18.0.0'  
+implementation 'com.google.firebase:firebase-auth:21.0.1'  
+def lottieVersion = "3.4.0"  
+implementation "com.airbnb.android:lottie:$lottieVersion"  
+testImplementation 'junit:junit:4.+'  
+androidTestImplementation 'androidx.test.ext:junit:1.1.3'  
+androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
