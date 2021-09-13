@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
@@ -22,8 +23,8 @@
 
     <TextView
         android:id="@+id/tv_des_ma"
-        android:layout_width="349dp"
-        android:layout_height="20dp"
+        android:layout_width="355dp"
+        android:layout_height="18dp"
         android:layout_marginStart="9dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="12dp"
@@ -50,12 +51,13 @@
         android:layout_marginStart="21dp"
         android:layout_marginTop="172dp"
         android:layout_marginEnd="56dp"
-        android:background="@mipmap/like_pic_foreground"
+        android:tag="not liked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/iv_rv_share"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:alpha="1"
         app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@mipmap/like_pic_foreground" />
 
@@ -101,5 +103,15 @@
         android:text="location : "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_rv_confidence" />
+
+    <TextView
+        android:id="@+id/tv_rv_likecount"
+        android:layout_width="58dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="16dp"
+        android:text="0 likes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

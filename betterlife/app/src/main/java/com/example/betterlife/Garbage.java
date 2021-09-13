@@ -21,18 +21,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.betterlife.ml.Model;
 import com.example.betterlife.ml.Wastermodel;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -90,7 +95,24 @@ public class Garbage extends AppCompatActivity {
                     confidence = Double.valueOf(probability.get(1).getScore());
                 }
 
-                writeNewPost("user", title,"garbage", des, confidence , lat_f , lon_f);
+                GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+                String user = "user";
+                String userId = "";
+                userId = acct.getId();
+                Switch anonymous = findViewById(R.id.switch_garbage_anonymous);
+                if(anonymous.isChecked()){
+                    user = "anonymous";
+                }
+                else{
+
+                    String [] userIdArr = acct.getEmail().split("@gmail\\.c")[0].split("\\.");
+                    user = "";
+                    for(int i=0; i<userIdArr.length; i++){
+                        user += userIdArr[i];
+                    }
+                }
+
+                writeNewPost(user, title,"garbage", des, confidence , lat_f , lon_f,userId );
 
                 Intent intent = new Intent(getApplicationContext() , AfterSubmission.class);
                 startActivity(intent);
@@ -133,7 +155,7 @@ public class Garbage extends AppCompatActivity {
                 probability = outputs.getProbabilityAsCategoryList();
 
                 TextView tvRes = findViewById(R.id.tv_garbage_1);
-                tvRes.setText( "report confidence : " + probability +"\ntake clear picture for better confidence");
+                tvRes.setText( "report confidence : " + probability.get(1).getScore() +"\ntake clear picture for better confidence");
                 // Releases model resources if no longer used.
                 model.close();
             } catch (IOException e) {
@@ -142,12 +164,35 @@ public class Garbage extends AppCompatActivity {
         }
     }
 
-    public void writeNewPost( String username, String title, String post_type, String description, double confidence, String lattitude, String longitude) {
-        Posts post = new Posts(username, title, post_type, description, confidence, lattitude, longitude);
+    public void writeNewPost( String username, String title, String post_type, String description, double confidence, String lattitude, String longitude, String userID) {
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference postRef = database.getReference("posts");
         String postId = postRef.push().getKey();
+        Posts post = new Posts(postId, username, title, post_type, description, confidence, lattitude, longitude, userID);
         postRef.child(postId).setValue(post);
+        setPostUser(userID , postId);
+    }
+
+    public void setPostUser(String username , String post) {
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        Users user = new Users();
+        if(acct !=null) {
+
+        }
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference userRef = database.getReference("users").child(username);
+        Task<DataSnapshot> task =  userRef.get();
+        task.addOnSuccessListener(new OnSuccessListener<DataSnapshot>() {
+            @Override
+            public void onSuccess(DataSnapshot dataSnapshot) {
+                Users user = dataSnapshot.getValue(Users.class);
+                user.setPosts(user.posts +   post + ",");
+                userRef.setValue(user);
+            }
+        });
+
     }
 
 

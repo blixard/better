@@ -8,17 +8,24 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable-v24/rounded_cornor_white.xml" value="0.15" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/gradient_ss_bg.xml" value="0.15" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/no_photo_taken_pic.xml" value="0.15" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/round_corner_black_border_white_bg.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/round_cornor_white_bg_lalpha_white_border.xml" value="0.16041666666666668" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/drawable/rounded_cornor.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_after_submission.xml" value="0.13385416666666666" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_garbage.xml" value="0.20471014492753623" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_garbage_test.xml" value="0.13697916666666668" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_main.xml" value="0.1511627906976744" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_menu_screen.xml" value="0.1328125" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_menu_screen.xml" value="0.152" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_model_selection.xml" value="0.1328125" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_post_view.xml" value="0.264" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_pothole.xml" value="0.264" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_pothole_test.xml" value="0.1328125" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_report.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_setting_page.xml" value="0.22916666666666666" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_signin_page.xml" value="0.2" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_splashscreen.xml" value="0.176" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/activity_user_view.xml" value="0.264" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/comments_row_list.xml" value="0.4" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/betterlife/app/src/main/res/layout/text_row_item.xml" value="0.4" />
       </map>
     </option>

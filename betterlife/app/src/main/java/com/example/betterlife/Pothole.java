@@ -13,6 +13,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Looper;
 import android.provider.MediaStore;
@@ -21,17 +22,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.betterlife.ml.Model;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -74,6 +80,8 @@ public class Pothole extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+
                 String title = etTitle.getText().toString();
                 if(title.equals("")){
                     title = "Nothing entered";
@@ -82,12 +90,29 @@ public class Pothole extends AppCompatActivity {
                 if(des.equals("")){
                     des = "Nothing entered";
                 }
+
+                String user = "user";
+                String userID = acct.getId();
+                Switch anonymous = findViewById(R.id.switch_pothole_anonymous);
+                if(anonymous.isChecked()){
+                    user = "anonymous";
+                }
+                else{
+
+                    if(acct !=null){
+                        String [] userIdArr = acct.getEmail().split("@gmail\\.c")[0].split("\\.");
+                        user = "";
+                        for(int i=0; i<userIdArr.length; i++){
+                            user += userIdArr[i];
+                        }
+                    }
+                }
+
                 double confidence = -1;
                 if(probability!=null ){
                     confidence = Double.valueOf(probability.get(1).getScore());
                 }
-
-                writeNewPost("user", title,"pothole", des, confidence , lat_f , lon_f);
+                writeNewPost(user, title,"pothole", des, confidence , lat_f , lon_f, userID);
 
                 Intent intent = new Intent(getApplicationContext() , AfterSubmission.class);
                 startActivity(intent);
@@ -138,12 +163,32 @@ public class Pothole extends AppCompatActivity {
         }
     }
 
-    public void writeNewPost( String username, String title, String post_type, String description, double confidence, String lattitude, String longitude) {
-        Posts post = new Posts(username, title, post_type, description, confidence, lattitude, longitude);
+    public void writeNewPost( String username, String title, String post_type, String description, double confidence, String lattitude, String longitude, String userID) {
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference postRef = database.getReference("posts");
         String postId = postRef.push().getKey();
+        Posts post = new Posts(postId, username, title, post_type, description, confidence, lattitude, longitude, userID);
         postRef.child(postId).setValue(post);
+        setPostUser(userID , postId );
+    }
+
+    public void setPostUser(String username , String post) {
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        Users user = new Users();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference userRef = database.getReference("users").child(username);
+        Task<DataSnapshot> task =  userRef.get();
+        task.addOnSuccessListener(new OnSuccessListener<DataSnapshot>() {
+            @Override
+            public void onSuccess(DataSnapshot dataSnapshot) {
+                Users user = dataSnapshot.getValue(Users.class);
+                user.setPosts(user.posts +   post + ",");
+                userRef.setValue(user);
+            }
+        });
+
     }
 
 
