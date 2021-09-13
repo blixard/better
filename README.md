@@ -3,6 +3,8 @@
 Welcome to Better, An android application, where users can make a report (post) like potholes on road, garbage mismanagement, flooded roads,corruption faced, etc and view, like, and comment on similar reports(posts) as well.
 There are several features that make this app very unique and highly practial and scalable and aims to make the world a **better** place, so is its name.
 
+download apk : https://drive.google.com/file/d/1Pv1hdyyM0D17qpOjq68wr9LpCBOHEGGw/view?usp=sharing
+
 ![Better Icon](./Images/better%20dark%20cropped.png)
 
 ## Features
