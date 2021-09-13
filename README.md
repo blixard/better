@@ -92,11 +92,33 @@ Apart from the base required libraries from android studio
      -   [Recycler View](https://developer.android.com/guide/topics/ui/layout/recyclerview)  - Move widgets and transition between screens.
     -   [Fragment](https://developer.android.com/guide/components/fragments)  - A basic unit of composable UI.
     -   [Layout](https://developer.android.com/guide/topics/ui/declaring-layout)  - Lay out widgets using different algorithms.
--   Third party and miscellaneous libraries
+   -   Third party and miscellaneous libraries
     -   [Tensorflow lite](https://www.tensorflow.org/lite/tutorials/model_maker_image_classification)  Using Mahcine learning models locally in phone
     -   [Firabse](https://firebase.google.com/): for  [Real time database](https://firebase.google.com/docs/database)
     -   [Lottie files](https://lottiefiles.com/)  To use lottie file, json formated animations
 
 ## Machine Learning 
+
+### Information
 As mentioned above Machine Learning is a core feature of this application that gives it a unque yet special advandtage over anything else.
-I have implemented the models
+I have 3 models of Image clasiffication implemented within the app.
+The models are made using pre trained deep learning models for image classificatinon. Tensorflow Tensorflow Lite Model Maker specifically desinged to make models to run natively in android. 
+
+### Models so far
+
+ #### POTHOLES DETECTION
+##### About
+The main aim of this is to detect the road with potholes or without potholes
+
+##### Input
+The app takes the image of a Road as an input
+##### Output
+The app gives confidence probability of 
+
+ 1. is a pothole
+ 2. is not a pothole
+
+This probability can be used to give confidence(Machine level validation ) to a report (post) on pothole 
+
+ ##### Dataset used
+ 
