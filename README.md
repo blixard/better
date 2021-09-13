@@ -104,15 +104,15 @@ As mentioned above Machine Learning is a core feature of this application that g
 I have 3 models of Image clasiffication implemented within the app.
 The models are made using pre trained deep learning models for image classificatinon. Tensorflow Tensorflow Lite Model Maker specifically desinged to make models to run natively in android. 
 
-### Models so far
+## Models so far
 
  #### POTHOLES DETECTION
-##### About
+#### About
 The main aim of this is to detect the road with potholes or without potholes
 
-##### Input
+#### Input
 The app takes the image of a Road as an input
-##### Output
+#### Output
 The app gives confidence probability of 
 
  1. is a pothole
@@ -120,26 +120,29 @@ The app gives confidence probability of
 
 This probability can be used to give confidence(Machine level validation ) to a report (post) on pothole 
 
- ##### Dataset used
+ #### Dataset used
 Pothole Detection Dataset
 https://www.kaggle.com/atulyakumar98/pothole-detection-dataset
 
- ##### Code
+ #### Code
 This is my code :
 https://www.kaggle.com/shubhaprasad/pothole-image-classification
 
-##### Results
-##### Application
+#### Results
+Training Accuracy : 100%
+Testing Accuracy : 100%
+
+#### Application
 The probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Potholes type
 
 
- #### WASTE DETECTION
-##### About
+ ### WASTE DETECTION
+#### About
 The main aim of this is to get the probability of wheather an image is Waste (Recyclable) or not Waste (Organic) 
 
-##### Input
+#### Input
 The app takes the image of object/ objects as an input
-##### Output
+#### Output
 The app gives confidence probability of 
 
  1. is waste
@@ -147,41 +150,43 @@ The app gives confidence probability of
 
 This probability can be used to give confidence(Machine level validation ) to a report (post) on pothole 
 
- ##### Dataset used
+ #### Dataset used
 Waste Classification Data
 https://www.kaggle.com/techsash/waste-classification-data
 
- ##### Code
+ #### Code
 This is my code :
 https://www.kaggle.com/shubhaprasad/waste-organic-recyclable
 
-##### Results
+#### Results
+Training Accuracy : 100%
+Testing Accuracy : 100%
 
-##### Application
+#### Application
 The probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Garabge type
 
- #### ROADWAY FLOODING DETECTION
-##### About
+ ### ROADWAY FLOODING DETECTION
+#### About
 The main aim of this is to get the probability that an image is of Roadway flooding
 
-##### Input
+#### Input
 The app takes the image of road as an input
-##### Output
+#### Output
 The app gives confidence probability of 
 Roadway floods
 
 This probability can be used to give confidence(Machine level validation ) to a report (post) on pothole 
 
- ##### Dataset used
+ #### Dataset used
 Roadway Flooding Image Dataset
 https://www.kaggle.com/saurabhshahane/roadway-flooding-image-dataset
 
- ##### Code
+ #### Code
 This is my code :
 https://www.kaggle.com/shubhaprasad/roadwayflood
 
-##### Results
+#### Results
 Training Accuracy : 100%
 Testing Accuracy : 100%
-##### Application
+#### Application
 The probability obtained as output after providing the required image as input can be used to give confidence(Machine level validation ) to a report (post) on Road Flood type
