@@ -194,4 +194,8 @@ The probability obtained as output after providing the required image as input c
 # Application
 
 ## Images
-![Alt text](./Images/Screenshot_2021-09-13-19-35-30-642_com.example.betterlife.jpg?raw=true "Title")
+
+
+
+### App ScreenShots 
+![ss1](./Images/app%20screenshots/1.jpg?raw=true "Title")
