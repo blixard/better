@@ -28,6 +28,8 @@ The app uses firebase real time databse to store the posts, comments and user in
 ### Multi Language
 The app supports multi language, local languages. Making it accessible to a much larger audience.
 
+### Offline
+The app runs the Machine learning models locally using the phones processing power thanks to tensorflow lite. Which lets the use of machine learning models implemented in the client side to run completly offline
 ### Social Media 
 The app is mainly a reporting app, where people report publicly/anonymously, the issuses that they want to be resolved. But this also acts as a social mdeia platform, where other people can see your reports and you can see other people s reports and provide your opinion, your voice, and your validation by using feature like Like, Comments, etc that gets updated in real time. Based on your activities you get social points which are displayed along with your val points. This enables a platform for a set of people and ecourages the act of raising issues and resolving it, thus making everything a bit **Better than Before** 
 
@@ -79,6 +81,7 @@ Apart from the base required libraries from android studio
 -   [Architecture](https://developer.android.com/jetpack/arch/)  - A collection of libraries that help you design robust, testable, and maintainable apps. Start with classes for managing your UI component lifecycle and handling data persistence.
     -   [Data Binding](https://developer.android.com/topic/libraries/data-binding/)  - Declaratively bind observable data to UI elements.
     -   [Lifecycles](https://developer.android.com/topic/libraries/architecture/lifecycle)  - Create a UI that automatically responds to lifecycle events.
+       -   [Threads](https://developer.android.com/reference/java/lang/Thread)  - For multithreading, Doing synchronous activities like loading images 
     -   [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)  - Build data objects that notify views when the underlying database changes.
     -   [Navigation](https://developer.android.com/topic/libraries/architecture/navigation/)  - Handle everything needed for in-app navigation.
 
@@ -89,3 +92,7 @@ Apart from the base required libraries from android studio
      -   [Recycler View](https://developer.android.com/guide/topics/ui/layout/recyclerview)  - Move widgets and transition between screens.
     -   [Fragment](https://developer.android.com/guide/components/fragments)  - A basic unit of composable UI.
     -   [Layout](https://developer.android.com/guide/topics/ui/declaring-layout)  - Lay out widgets using different algorithms.
+   -   Third party and miscellaneous libraries
+    -   [Tensorflow lite](https://www.tensorflow.org/lite/tutorials/model_maker_image_classification)  Using Mahcine learning models locally in phone
+    -   [Firabse](https://firebase.google.com/): for  [Real time database](https://firebase.google.com/docs/database)
+    -   [Lottie files](https://lottiefiles.com/)  To use lottie file, json formated animations
