@@ -201,9 +201,7 @@ The probability obtained as output after providing the required image as input c
 
 ### App ScreenShots 
 
-![splashscreen](./Images/app%20screenshots/1r.jpg?raw=true "Title")
-
-![Home Screen](./Images/app%20screenshots/2r.jpg?raw=true "Title")
+![splashscreen](./Images/app%20screenshots/1r.jpg?raw=true "Title") ![Home Screen](./Images/app%20screenshots/2r.jpg?raw=true "Title")
 
 #### Report View / Comments
 ![ss1](./Images/app%20screenshots/4r.jpg?raw=true "Title")
