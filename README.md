@@ -92,7 +92,11 @@ Apart from the base required libraries from android studio
      -   [Recycler View](https://developer.android.com/guide/topics/ui/layout/recyclerview)  - Move widgets and transition between screens.
     -   [Fragment](https://developer.android.com/guide/components/fragments)  - A basic unit of composable UI.
     -   [Layout](https://developer.android.com/guide/topics/ui/declaring-layout)  - Lay out widgets using different algorithms.
-   -   Third party and miscellaneous libraries
+-   Third party and miscellaneous libraries
     -   [Tensorflow lite](https://www.tensorflow.org/lite/tutorials/model_maker_image_classification)  Using Mahcine learning models locally in phone
     -   [Firabse](https://firebase.google.com/): for  [Real time database](https://firebase.google.com/docs/database)
     -   [Lottie files](https://lottiefiles.com/)  To use lottie file, json formated animations
+
+## Machine Learning 
+As mentioned above Machine Learning is a core feature of this application that gives it a unque yet special advandtage over anything else.
+I have implemented the models
