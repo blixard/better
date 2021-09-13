@@ -221,7 +221,7 @@ The probability obtained as output after providing the required image as input c
 ![ss1](./Images/app%20screenshots/11.jpg?raw=true "Title")
 
 #### User / User Posts / User Comments
-![ss1](./Images/app%20screenshots/12.jpg?raw=true "Title")
+![ss1](./Images/app%20screenshots/13.jpg?raw=true "Title")
 
 #### Sign Out
 ![ss1](./Images/app%20screenshots/7.jpg?raw=true "Title")
