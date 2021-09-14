@@ -34,8 +34,13 @@ The app supports multi language, local languages. Making it accessible to a much
 
 ### Offline
 The app runs the Machine learning models locally using the phones processing power thanks to tensorflow lite. Which lets the use of machine learning models implemented in the client side to run completly offline
+
 ### Social Media 
 The app is mainly a reporting app, where people report publicly/anonymously, the issuses that they want to be resolved. But this also acts as a social mdeia platform, where other people can see your reports and you can see other people s reports and provide your opinion, your voice, and your validation by using feature like Like, Comments, etc that gets updated in real time. Based on your activities you get social points which are displayed along with your val points. This enables a platform for a set of people and ecourages the act of raising issues and resolving it, thus making everything a bit **Better than Before** 
+
+
+### Better campaign
+"BETTER" has a unique way of proceeding with developments. There is a lot of features, a lot of types of posts that need to be there in the app. Therefore, the features are added in stages, each stage representing a mission in this campaign. More about the stage 1 of Better towards the end
 
 # Development
 
