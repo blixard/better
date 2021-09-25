@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-image: url('./res/better_campaign_desktop.gif'); */
+}
+
+#display, .posts , .dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#display{
+    height: 100vh;
+}
+
+.dashboard{
+    height: 80%;
+}
+
+.posts{
+    /* width: 80%;
+    height: 100%; */
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    height: 80%;
+    background-color: grey;
+}
+
+.post > *{
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(53, 56, 56);
+    color: white;
+}
+
+.post img{
+    width: 50%;
+}
+
+.post .post_title{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.post .post_user{
+    font-size: smaller;
+    font-weight: bolder;
+}
+
+.post .post_des{
+    font-size: small;
+}
+
+.post .post_actions{
+    width: 80%;
+    height: 30%;
+}
+
+.post .post_actions img{
+    width: 30px;
+}
