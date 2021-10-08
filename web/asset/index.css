@@ -23,12 +23,17 @@ body{
 }
 
 .posts{
-    /* width: 80%;
-    height: 100%; */
+    width: 80%;
+    /* height: 100%; */
     padding: 10px;
     margin: 10px;
     display: flex;
     flex-direction: column;
+}
+
+.post{
+    width: 100%;
+    padding: 30px;
 }
 
 
@@ -63,8 +68,15 @@ body{
 .post .post_actions{
     width: 80%;
     height: 30%;
+    display: flex;
+    padding: 5px;
+    justify-content: left;
+    position: relative;
+    bottom: 0;
+    align-items: center;
 }
 
 .post .post_actions img{
-    width: 30px;
+    width: 20px;
+    height: 20px;
 }

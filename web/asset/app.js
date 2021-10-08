@@ -40,6 +40,7 @@
 
     })
 
+    // read data function
     async function readData(){
       const db = getDatabase();
       const starCountRef = ref(db, 'posts/' );
@@ -61,7 +62,6 @@
           },{
             onlyOnce: true
           })
-          // console.log(postsList)
         }) 
       },{
         onlyOnce: true
@@ -93,12 +93,41 @@
 
     function createPostElement(postData , userData){
       var newPost = document.createElement("post")
-      newPost.innerHTML = `
-        <img src="${userData.personPhoto}" alt="image">
-        <div class="post_title">${postData.title}</div>
-        <div class="post_user">${postData.username}</div>
-        <p class="post_des">${postData.description}</p>
+      // newPost.innerHTML = `
+      //   <img src="${userData.personPhoto}" alt="image">
+      //   <div class="post_title">${postData.title}</div>
+      //   <div class="post_user">${postData.username}</div>
+      //   <p class="post_des">${postData.description}</p>
+      // `
+
+    newPost.innerHTML = `
+    <div class="card p-3 "> 
+        <div class="d-flex justify-content-between mt-2">
+            <div class="d-flex flex-row">
+                <div class="user-image"> <img src="${userData.personPhoto}"> </div>
+                <div class="d-flex flex-column">
+                    <h6 class="mb-0">${postData.username}</h6> <span class="date">Nov 29, 2020 at 9:40</span>
+                </div>
+            </div>
+            <div> <span>Resolve</span> </div>
+        </div>
+        <p class="content">${postData.description}</p>
       `
+
+      var commentPost = document.createElement('commentPost');
+      commentPost.innerHTML = `
+      <div class="form"> <input class="form-control" placeholder="Write a comment...">
+          <div class="mt-2 d-flex justify-content-end"> 
+              <button class="btn btn-primary btn-sm ms-1">Suggest changes </button> <button class="btn btn-outline-secondary btn-sm  "> Cancel</button> </div>
+          </div>
+      </div>
+      `
+
+      commentPost.style.display = "none"
+
+      // harsh codes 
+      
+
       newPost.className = "post"
       newPost.onclick = setFunction("post", postData.username );
 
@@ -114,15 +143,28 @@
 
       var commentBtn = document.createElement("commentbtn");
       commentBtn.innerHTML = `<img src="./asset/res/comment_pic.png" alt="comment">`
-      commentBtn.onclick = setFunction("comment", postData.username)
+      commentBtn.appendChild(commentPost);
+      commentBtn.onclick = ()=>{ 
+        if(commentPost.style.display == "block"){
+          commentPost.style.display = "none"
+        }
+        else{
+          commentPost.style.display = "block"
+        }
+      } 
+
+      var commentClass = document.createElement("commentclass");
+
+      commentClass.appendChild(commentBtn);
+      commentClass.appendChild(commentPost);
 
       var shareBtn = document.createElement("sharebtn");
       shareBtn.innerHTML = `<img src="./asset/res/share_pic.png" alt="share">`
       shareBtn.onclick = setFunction("share", postData.username)  
 
       postActions.appendChild(likeBtn)
-      postActions.appendChild(commentBtn)
       postActions.appendChild(shareBtn)
+      postActions.appendChild(commentClass)
       newPost.appendChild(postActions)     
 
       return newPost
@@ -138,7 +180,7 @@
     function setFunction(type , data){
       if(type == "like"){
         return function onLike(){
-          alert(data + " liked")
+          document.getElementById("posts").style.display = none;
         }
       }
       else if(type == "comment"){
