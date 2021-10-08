@@ -32,33 +32,23 @@ body{
 }
 
 
-.post{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 10px;
-    margin: 10px;
-    width: 50%;
-    height: 80%;
-    background-color: grey;
-}
 
-.post > *{
-    margin: 5px;
-    padding: 5px;
-    background-color: rgb(53, 56, 56);
-    color: white;
-}
 
 .post img{
+    width: 200px;
+    height:150px;
+    margin-right:20%;
     width: 50%;
+    border-radius: 50%;
+   
+   
+    
 }
 
 .post .post_title{
     font-size: larger;
     font-weight: bolder;
+    align-items: right ;
 }
 
 .post .post_user{
